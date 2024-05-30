@@ -41,7 +41,7 @@ def parse_arguments():
         "--input_path",
         default="data/processed/cached_{sequence_length}.txt",
         type=str,
-        help="The input data dir. Should contain .hdf5 files for the task.",
+        help="The input data dir. Should be the cached text file.",
     )
     parser.add_argument(
         "--config_file",
