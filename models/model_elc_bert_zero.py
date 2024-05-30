@@ -284,13 +284,13 @@ class Attention(nn.Module):
 
         query_pos, key_pos = self.in_proj_qk(self.dropout(relative_embedding)).chunk(
             2, dim=-1
-        )  # shape: [2T-1, D]
+        )  # shape: [2C-1, D]
         query_pos = query_pos.view(
             -1, self.num_heads, self.head_size
-        )  # shape: [2T-1, H, D]
+        )  # shape: [2C-1, H, D]
         key_pos = key_pos.view(
             -1, self.num_heads, self.head_size
-        )  # shape: [2T-1, H, D]
+        )  # shape: [2C-1, H, D]
 
         query = query.reshape(
             query_len, batch_size * self.num_heads, self.head_size
