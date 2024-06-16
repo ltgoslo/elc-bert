@@ -1,10 +1,10 @@
 ## Pre Training Folder
 
-In this folder you will find scripts for the caching of the dataset, optimizer, dataset and other utility functions
+In this folder, you will find scripts for the caching of the dataset, optimizer, dataset and other utility functions
 
 #### `cache_dataset.py`
 
-This script will cache your dataset in to a defined sequence length for slightly faster training.
+This script will cache your dataset into a defined sequence length for slightly faster training. The current train file in the parent folder requires the data to be cached.
 
 Usage:
 
@@ -17,7 +17,7 @@ python cache_dataset.py \
 
 #### `config.py`
 
-Script containing the config class. Can import JSON files to create a config object.
+A script containing the config class. Can import JSON files to create a config object.
 
 #### `dataset.py`
 
@@ -41,7 +41,7 @@ Contains the LAMB (You et al., 2019) optimizer code.
 
 #### `utils.py`
 
-Contains a myriad of utilitary functions as well as the learning rate scheduler. Here is a list of all the functions:
+Contains a myriad of utility functions as well as the learning rate scheduler. Here is a list of all the functions:
 
  - `cosine_schedule_with_warmup(optimizer, num_warmup_steps, num_training_steps, min_factor)`
  - `seed_everything(seed_value)`
@@ -51,4 +51,4 @@ Contains a myriad of utilitary functions as well as the learning rate scheduler.
 
 ### References
 
-You, Yang, et al. "Large batch optimization for deep learning: Training bert in 76 minutes." arXiv preprint arXiv:1904.00962 (2019).
+You, Yang, et al. "Large batch optimization for deep learning: Training BERT in 76 minutes." arXiv preprint arXiv:1904.00962 (2019).
