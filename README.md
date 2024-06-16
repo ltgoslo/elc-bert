@@ -16,7 +16,7 @@
 <p align="center">
   <a href="https://aclanthology.org/2023.conll-babylm.20/"><b>Paper</b></a><br>
   <a href="https://huggingface.co/lgcharpe/ELC_BERT_baby_100M"><b>HuggingFace 100M model</b></a><br>
-  <a href="https://huggingface.co/lgcharpe/ELC_BERT_baby_10M"><b>HuggingFace 10M model</b></a>
+  <a href="https://huggingface.co/lgcharpe/ELC_BERT_small_baby_10M"><b>HuggingFace 10M model</b></a>
 </p>
 
 _______
