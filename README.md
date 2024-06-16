@@ -62,7 +62,7 @@ _______
 
 ## Training
 
-After having preprocessed your data and creating you tokenizer, you are ready to train your ELC BERT model. To this extend you can run:
+After preprocessing your data, creating your tokenizer, and caching the data with your tokenizer, you are ready to train your ELC BERT model. To this extent you can run:
 
 ```bash
 python train_elc_bert_*.py \
@@ -93,12 +93,12 @@ python train_elc_bert_*.py \
 ```
 
 A few things to note:
- - In the dataset (look up `pre_training/dataset.py`) you can pass a `random_p` and `keep_p` representing the probability of masked tokens to replace by either a random token or the original token. In the code they are both set to 0.1 byt default, but this can be changed.
- - Our code assumes the usage of wandb but this can be removed. In general before calling wandb we do a check for `is_main_process()` (when runninng multiple GPUs/CPUs, it makes sure only one process (the main) executes the code) to make sure to not have multiple wandb runs for the same model.
+ - In the dataset (look up `pre_training/dataset.py`) you can pass a `random_p` and `keep_p` representing the probability of a masked token being replaced by either a random token or the original token. In the code they are both set to 0.1 by default, but this can be changed.
+ - Our code assumes the usage of wandb but this can be removed. In general, before calling wandb we do a check for `is_main_process()` (when running multiple GPUs/CPUs, it makes sure only one process (the main) executes the code) to make sure to not have multiple wandb runs for the same model.
  - We assume the usage of SLURM at the start of the code (to import wandb) (lines 31-32), if you do not use SLURM remove line 31 (and line 32 if you do not use wandb).
 <br>
 
-## Please cite the following publication (just arXiv for now)
+## Please cite the following publication
 ```bibtex
 @inproceedings{georges-gabriel-charpentier-samuel-2023-layers,
     title = "Not all layers are equally as important: Every Layer Counts {BERT}",
