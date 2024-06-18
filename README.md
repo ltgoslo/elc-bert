@@ -68,7 +68,7 @@ _______
 4. Choose a config file found in configs, or create your own config file in the same style.
 6. Run one of the `train_elc_bert_*.py`, your pre-trained model will be found in the models folder.
 
-Specific detail on the files and scripts can be found in the READMEs and scripts themselves.
+Specific details on the files and scripts can be found in the READMEs and scripts themselves.
 _______
 
 <br>
