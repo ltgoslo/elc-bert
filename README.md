@@ -60,9 +60,22 @@ _______
 
 <br>
 
+## Code to pre-train a model
+
+1. Run `preprocess/run.sh`.
+2. Run `tokenizers/create_tokenizers.py` or use one of the provided tokenizers in the tokenizers folder.
+3. Run `pre_training/cache_dataset.py`.
+4. Choose a config file found in configs, or create your own config file in the same style.
+6. Run one of the `train_elc_bert_*.py`, your pre-trained model will be found in the models folder.
+
+Specific detail on the files and scripts can be found in the READMEs and scripts themselves.
+_______
+
+<br>
+
 ## Training
 
-After preprocessing your data, creating your tokenizer, and caching the data with your tokenizer, you are ready to train your ELC BERT model. To this extent you can run:
+After preprocessing your data, creating your tokenizer, and caching the data with your tokenizer, you are ready to train your ELC BERT model. To this extent, you can run:
 
 ```bash
 python train_elc_bert_*.py \
